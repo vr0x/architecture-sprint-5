@@ -75,42 +75,42 @@ rules:
       - intent: выбор_базы_данных
       - action: action_db_choice
 
-  - rule: Документация архитектуры
-    steps:
-      - intent: документация
-      - action: utter_help
+  # - rule: Документация архитектуры
+  #   steps:
+  #     - intent: документация
+  #     - action: utter_help
 
-  - rule: Мониторинг микросервисов
-    steps:
-      - intent: мониторинг_микросервисов
-      - action: action_monitoring_info
+  # - rule: Мониторинг микросервисов
+  #   steps:
+  #     - intent: мониторинг_микросервисов
+  #     - action: action_monitoring_info
 
-  - rule: Оркестрация микросервисов
-    steps:
-      - intent: оркестрация_микросервисов
-      - action: utter_help
+  # - rule: Оркестрация микросервисов
+  #   steps:
+  #     - intent: оркестрация_микросервисов
+  #     - action: utter_help
 
-  - rule: Тестирование микросервисов
-    steps:
-      - intent: тестирование_микросервисов
-      - action: action_testing_info
+  # - rule: Тестирование микросервисов
+  #   steps:
+  #     - intent: тестирование_микросервисов
+  #     - action: action_testing_info
 
-  - rule: Сервисная сеть
-    steps:
-      - intent: сервисная_сеть
-      - action: utter_help
+  # - rule: Сервисная сеть
+  #   steps:
+  #     - intent: сервисная_сеть
+  #     - action: utter_help
 
-  - rule: Безопасность микросервисов
-    steps:
-      - intent: безопасность_микросервисов
-      - action: action_security_info
+  # - rule: Безопасность микросервисов
+  #   steps:
+  #     - intent: безопасность_микросервисов
+  #     - action: action_security_info
 
   - rule: Масштабируемость микросервисов
     steps:
       - intent: масштабируемость
       - action: action_scalability_info
 
-  - rule: Отказоустойчивость микросервисов
-    steps:
-      - intent: отказоустойчивость_микросервисов
-      - action: action_resilience_info
+  # - rule: Отказоустойчивость микросервисов
+  #   steps:
+  #     - intent: отказоустойчивость_микросервисов
+  #     - action: action_resilience_info
