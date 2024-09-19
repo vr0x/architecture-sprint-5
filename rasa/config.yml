@@ -1,7 +1,9 @@
 language: ru
 
 pipeline:
-- name: WhitespaceTokenizer                   # Токенизация русского языка
+- name: SpacyNLP
+  model: "ru_core_news_sm"
+- name: SpacyTokenizer                   # Токенизация русского языка
 - name: RegexFeaturizer                       # Регулярные выражения для извлечения особенностей
 - name: LexicalSyntacticFeaturizer            # Лексический синтаксический анализ
 - name: CountVectorsFeaturizer                # Векторизация токенов

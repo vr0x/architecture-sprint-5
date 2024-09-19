@@ -1,0 +1,19 @@
+services:
+  rasa:
+    build: 
+      context: .
+      dockerfile: Dockerfile.rasa
+    volumes:
+      - ./rasa:/rasa-home
+      - ./rasa-cache:/app/.cache
+    ports:
+      - 5005:5005
+    command: run --debug --enable-api -p 5005 -m /rasa-home/models --cors "*"
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile.web
+      args:
+        - RASA_URL=http://localhost:5005
+    ports:
+      - 8080:80

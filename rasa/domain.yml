@@ -18,9 +18,11 @@ intents:
   - выбор_базы_данных
   - методологии_разработки
   - архитектурные_паттерны
-  # - документация
-  # - облачные_технологии
-  # - архитектурные_решения
+  - документация
+  - облачные_технологии
+  - архитектурные_решения
+  - сервисная_сеть
+  - оркестрация_микросервисов
 
 responses:
   utter_greet:
@@ -83,16 +85,5 @@ responses:
   utter_architectural_decisions:
     - text: "Принятие архитектурных решений должно основываться на анализе требований, рисков и стоимости реализации."
 
-actions:
-  - action_suggest_tech_stack
-  - action_project_info
-  - action_tech_info
-  - action_microservice_info
-  - action_monolith_info
-  - action_integration_info
-  - action_security_info
-  - action_scalability_info
-  - action_resilience_info
-  - action_devops_info
-  - action_containerization_info
-  - action_db_choice
+# actions:
+  # - action_suggest_tech_stack

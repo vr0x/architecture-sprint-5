@@ -1,1 +1,1 @@
-docker build . -t rasa-apple
+docker build . -t rasa-apple -f Dockerfile.rasa

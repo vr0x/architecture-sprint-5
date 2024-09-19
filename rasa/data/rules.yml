@@ -18,97 +18,97 @@ rules:
   - rule: Информация о проекте
     steps:
       - intent: описание_архитектуры
-      - action: action_project_info
+      - action: utter_describe_architecture
 
   - rule: Выбор технологии
     steps:
       - intent: выбор_технологий
-      - action: action_tech_info
+      - action: utter_choose_tech_stack
 
   - rule: Микросервисная архитектура
     steps:
       - intent: микросервисы
-      - action: action_microservice_info
+      - action: utter_microservices
 
   - rule: Монолитная архитектура
     steps:
       - intent: монолит
-      - action: action_monolith_info
+      - action: utter_monolith
 
   - rule: Интеграция систем
     steps:
       - intent: интеграция_систем
-      - action: action_integration_info
+      - action: utter_integration
 
   - rule: Обеспечение безопасности
     steps:
       - intent: безопасность
-      - action: action_security_info
+      - action: utter_security
 
   - rule: Улучшение производительности
     steps:
       - intent: производительность
-      - action: utter_help
+      - action: utter_performance
 
   - rule: Масштабируемость системы
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - rule: Обеспечение отказоустойчивости
     steps:
       - intent: отказоустойчивость
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - rule: DevOps процессы
     steps:
       - intent: DevOps
-      - action: action_devops_info
+      - action: utter_devops
 
   - rule: Контейнеризация
     steps:
       - intent: контейнеризация
-      - action: action_containerization_info
+      - action: utter_containerization
 
   - rule: Выбор базы данных
     steps:
       - intent: выбор_базы_данных
-      - action: action_db_choice
+      - action: utter_database_choice
 
-  # - rule: Документация архитектуры
-  #   steps:
-  #     - intent: документация
-  #     - action: utter_help
+  - rule: Документация архитектуры
+    steps:
+      - intent: документация
+      - action: utter_documentation
 
   # - rule: Мониторинг микросервисов
   #   steps:
   #     - intent: мониторинг_микросервисов
   #     - action: action_monitoring_info
 
-  # - rule: Оркестрация микросервисов
-  #   steps:
-  #     - intent: оркестрация_микросервисов
-  #     - action: utter_help
+  - rule: Оркестрация микросервисов
+    steps:
+      - intent: оркестрация_микросервисов
+      - action: utter_microservices
 
   # - rule: Тестирование микросервисов
   #   steps:
   #     - intent: тестирование_микросервисов
   #     - action: action_testing_info
 
-  # - rule: Сервисная сеть
-  #   steps:
-  #     - intent: сервисная_сеть
-  #     - action: utter_help
+  - rule: Сервисная сеть
+    steps:
+      - intent: сервисная_сеть
+      - action: utter_cloud_technologies
 
   # - rule: Безопасность микросервисов
   #   steps:
   #     - intent: безопасность_микросервисов
   #     - action: action_security_info
 
-  - rule: Масштабируемость микросервисов
-    steps:
-      - intent: масштабируемость
-      - action: action_scalability_info
+  # - rule: Масштабируемость микросервисов
+  #   steps:
+  #     - intent: масштабируемость
+  #     - action: action_scalability_info
 
   # - rule: Отказоустойчивость микросервисов
   #   steps:
