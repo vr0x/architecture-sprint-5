@@ -1,34 +1,109 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - приветствие
+  - прощание
+  - запрос_помощи
+  - описание_архитектуры
+  - выбор_технологий
+  - микросервисы
+  - монолит
+  - интеграция_систем
+  - безопасность
+  - производительность
+  - масштабируемость
+  - отказоустойчивость
+  - DevOps
+  - контейнеризация
+  - выбор_базы_данных
+  # - методологии_разработки
+  # - архитектурные_паттерны
+  # - документация
+  # - облачные_технологии
+  - оркестрация_микросервисов
+  - тестирование_микросервисов
+  - сервисная_сеть
+  - безопасность_микросервисов
+  - мониторинг_микросервисов
+  - отказоустойчивость_микросервисов
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "Привет! Как я могу вам помочь?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "До свидания! Если у вас будут вопросы — обращайтесь!"
+  
+  utter_help:
+  - text: "Чем я могу вам помочь?"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  # utter_describe_architecture:
+  # - text: "Архитектура решений — это структурный подход к проектированию и реализации IT-систем."
+
+  # utter_choose_tech_stack:
+  # - text: "Для выбора технологий нужно учитывать такие факторы, как требования проекта, масштабируемость и поддержка."
+
+  utter_microservices:
+  - text: "Микросервисная архитектура — это подход к разработке, когда приложение разделяется на независимые сервисы, взаимодействующие между собой."
+
+  # utter_monolith:
+  # - text: "Монолитная архитектура — это подход, при котором всё приложение работает как единое целое."
+
+  # utter_integration:
+  # - text: "Интеграция систем может быть реализована через API Gateway, SOA или использование шины данных."
+
+  # utter_security:
+  # - text: "Для безопасности важно предусмотреть меры по защите данных, аутентификации и авторизации."
+
+  # utter_performance:
+  # - text: "Для улучшения производительности можно использовать кэширование, оптимизацию запросов и балансировку нагрузки."
+
+  # utter_scalability:
+  # - text: "Масштабируемость достигается с помощью горизонтального и вертикального масштабирования компонентов системы."
+
+  # utter_fault_tolerance:
+  # - text: "Отказоустойчивость может быть обеспечена за счет репликации данных и резервирования компонентов системы."
+
+  # utter_devops:
+  # - text: "DevOps помогает автоматизировать процессы разработки и развертывания через CI/CD."
+
+  # utter_containerization:
+  # - text: "Контейнеризация позволяет упаковать приложение с его зависимостями и развертывать его в любом окружении."
+
+  # utter_database_choice:
+  # - text: "Выбор базы данных зависит от требований к производительности, масштабируемости и консистентности данных."
+
+  # utter_methodologies:
+  # - text: "Agile и Waterfall — это две популярные методологии разработки, каждая из которых имеет свои преимущества и недостатки."
+
+  # utter_architecture_patterns:
+  # - text: "Популярные архитектурные паттерны включают MVC, CQRS и Event Sourcing."
+
+  # utter_documentation:
+  # - text: "Для документации архитектуры можно использовать схемы UML, диаграммы последовательностей и описание потоков данных."
+
+  # utter_cloud_technologies:
+  # - text: "AWS, Azure и Google Cloud предлагают множество сервисов для разработки и развертывания приложений в облаке."
+
+  # utter_architectural_decisions:
+  # - text: "Принятие архитектурных решений должно основываться на анализе требований, рисков и стоимости реализации."
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+  - action_suggest_tech_stack
+  - action_project_info
+  - action_tech_info
+  - action_microservice_info
+  - action_monolith_info
+  - action_integration_info
+  - action_security_info
+  - action_scalability_info
+  - action_resilience_info
+  - action_devops_info
+  - action_containerization_info
+  - action_db_choice
+  - action_monitoring_info
+  - action_testing_info
