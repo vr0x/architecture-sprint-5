@@ -12,99 +12,84 @@ stories:
 - story: Информация о проекте
   steps:
   - intent: описание_архитектуры
-  - action: action_project_info
+  - action: utter_describe_architecture
 
 - story: Выбор технологии для проекта
   steps:
   - intent: выбор_технологий
-  - action: action_tech_info
+  - action: utter_choose_tech_stack
 
 - story: Микросервисная архитектура
   steps:
   - intent: микросервисы
-  - action: action_microservice_info
+  - action: utter_microservices
 
 - story: Монолитная архитектура
   steps:
   - intent: монолит
-  - action: action_monolith_info
+  - action: utter_monolith
 
 - story: Интеграция систем
   steps:
   - intent: интеграция_систем
-  - action: action_integration_info
+  - action: utter_integration
 
 - story: Безопасность системы
   steps:
   - intent: безопасность
-  - action: action_security_info
+  - action: utter_security
 
 - story: Оптимизация производительности
   steps:
   - intent: производительность
-  - action: utter_help
+  - action: utter_performance
 
 - story: Масштабируемость системы
   steps:
   - intent: масштабируемость
-  - action: action_scalability_info
+  - action: utter_scalability
 
 - story: Обеспечение отказоустойчивости
   steps:
   - intent: отказоустойчивость
-  - action: action_resilience_info
+  - action: utter_fault_tolerance
 
 - story: DevOps настройка
   steps:
   - intent: DevOps
-  - action: action_devops_info
+  - action: utter_devops
 
 - story: Контейнеризация проекта
   steps:
   - intent: контейнеризация
-  - action: action_containerization_info
+  - action: utter_containerization
 
 - story: Выбор базы данных
   steps:
   - intent: выбор_базы_данных
-  - action: action_db_choice
+  - action: utter_database_choice
 
-# - story: Документация архитектуры
-#   steps:
-#   - intent: документация
-#   - action: utter_help
-
-- story: Мониторинг микросервисов
+- story: Документация архитектуры
   steps:
-  - intent: мониторинг_микросервисов
-  - action: action_monitoring_info
+  - intent: документация
+  - action: utter_documentation
 
-- story: Оркестрация микросервисов
+- story: Методологии разработки
   steps:
-  - intent: оркестрация_микросервисов
-  - action: utter_help
+  - intent: методологии_разработки
+  - action: utter_methodologies
 
-- story: Тестирование микросервисов
+- story: Архитектурные патерны
   steps:
-  - intent: тестирование_микросервисов
-  - action: action_testing_info
+  - intent: архитектурные_паттерны
+  - action: utter_architecture_patterns
 
-- story: Сервисная сеть
+- story: Облачные технологии
   steps:
-  - intent: сервисная_сеть
-  - action: utter_help
+  - intent: облачные_технологии
+  - action: utter_cloud_technologies
 
-- story: Безопасность микросервисов
+- story: Принятие архитектурных решений
   steps:
-  - intent: безопасность_микросервисов
-  - action: action_security_info
-
-- story: Масштабируемость микросервисов
-  steps:
-  - intent: масштабируемость
-  - action: action_scalability_info
-
-- story: Отказоустойчивость микросервисов
-  steps:
-  - intent: отказоустойчивость_микросервисов
-  - action: action_resilience_info
+  - intent: архитектурные_решения
+  - action: utter_architectural_decisions
