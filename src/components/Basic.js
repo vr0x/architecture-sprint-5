@@ -38,16 +38,17 @@ function Basic() {
 
   // Функция для отправки сообщения на сервер Rasa и получения ответа
   const rasaAPI = async function handleClick(name, msg) {
-    await fetch("http://localhost:5005/webhooks/rest/webhook", {
+    await fetch("/webhooks/rest/webhook", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
         charset: "UTF-8",
+        'Access-Control-Allow-Origin': '*',
       },
-      credentials: "same-origin",
+      credentials: "include",
       body: JSON.stringify({ sender: name, message: msg }),
-    })
+    }, {mode:'no-cors'})
       .then((response) => response.json()) // Преобразуем ответ в JSON
       .then((response) => {
         if (response) {
