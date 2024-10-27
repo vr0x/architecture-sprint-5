@@ -133,8 +133,6 @@ Temporary Items
 
 ### Node ###
 # Logs
-logfile
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
