@@ -51,6 +51,7 @@ function Basic() {
       .then((response) => response.json()) // Преобразуем ответ в JSON
       .then((response) => {
         if (response) {
+          console.log(response);
           // Получаем текстовое сообщение от бота
           const temp = response[0];
           const recipient_id = temp["recipient_id"];
