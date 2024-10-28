@@ -114,3 +114,23 @@ rules:
     steps:
       - intent: отказоустойчивость_микросервисов
       - action: action_resilience_info
+
+  - rule: Архитектурные паттерны
+    steps:
+      - intent: архитектурные_паттерны
+      - action: action_architecture_patterns
+
+  - rule: Архитектурные решения
+    steps:
+      - intent: архитектурные_решения
+      - action: action_architectural_decisions
+
+  - rule: Методологии разработки
+    steps:
+      - intent: методологии_разработки
+      - action: action_methodologies
+
+  - rule: Микросервисная архитектура
+    steps:
+      - intent: микросервисная_архитектура
+      - action: action_microservice_architecture

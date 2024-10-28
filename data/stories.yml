@@ -106,3 +106,28 @@ stories:
     steps:
       - intent: отказоустойчивость_микросервисов
       - action: action_resilience_info
+
+  - story: Архитектурные паттерны
+    steps:
+      - intent: архитектурные_паттерны
+      - action: action_architecture_patterns
+
+  - story: Архитектурные решения
+    steps:
+      - intent: архитектурные_решения
+      - action: action_architectural_decisions
+
+  - story: Методологии разработки
+    steps:
+      - intent: методологии_разработки
+      - action: action_methodologies
+
+  - story: Микросервисная архитектура
+    steps:
+      - intent: микросервисная_архитектура
+      - action: action_microservice_architecture
+
+  - story: Облачные технологии
+    steps:
+      - intent: облачные_технологии
+      - action: action_cloud_technologies
