@@ -38,7 +38,7 @@ function Basic() {
 
   // Функция для отправки сообщения на сервер Rasa и получения ответа
   const rasaAPI = async function handleClick(name, msg) {
-    await fetch("http://localhost:5005/webhooks/rest/webhook", {
+    await fetch("http://130.193.44.52:5005/webhooks/rest/webhook", {
       method: "POST",
       headers: {
         Accept: "application/json",
