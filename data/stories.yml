@@ -15,27 +15,27 @@ stories:
   - story: Выбор технологии для проекта
     steps:
       - intent: выбор_технологий
-      - action: action_tech_info
+      - action: utter_choose_tech_stack
 
   - story: Микросервисная архитектура
     steps:
       - intent: микросервисы
-      - action: action_microservice_info
+      - action: utter_microservices
 
   - story: Монолитная архитектура
     steps:
       - intent: монолит
-      - action: action_monolith_info
+      - action: utter_monolith
 
   - story: Интеграция систем
     steps:
       - intent: интеграция_систем
-      - action: action_integration_info
+      - action: utter_integration
 
   - story: Безопасность системы
     steps:
       - intent: безопасность
-      - action: action_security_info
+      - action: utter_security
 
   - story: Оптимизация производительности
     steps:
@@ -45,27 +45,27 @@ stories:
   - story: Масштабируемость системы
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - story: Обеспечение отказоустойчивости
     steps:
       - intent: отказоустойчивость
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - story: DevOps настройка
     steps:
       - intent: DevOps
-      - action: action_devops_info
+      - action: utter_devops
 
   - story: Контейнеризация проекта
     steps:
       - intent: контейнеризация
-      - action: action_containerization_info
+      - action: utter_containerization
 
   - story: Выбор базы данных
     steps:
       - intent: выбор_базы_данных
-      - action: action_db_choice
+      - action: utter_database_choice
 
   - story: Документация архитектуры
     steps:
@@ -95,32 +95,32 @@ stories:
   - story: Безопасность микросервисов
     steps:
       - intent: безопасность_микросервисов
-      - action: action_security_info
+      - action: utter_security
 
   - story: Масштабируемость микросервисов
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - story: Отказоустойчивость микросервисов
     steps:
       - intent: отказоустойчивость_микросервисов
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - story: Архитектурные паттерны
     steps:
       - intent: архитектурные_паттерны
-      - action: action_architecture_patterns
+      - action: utter_architecture_patterns
 
   - story: Архитектурные решения
     steps:
       - intent: архитектурные_решения
-      - action: action_architectural_decisions
+      - action: utter_architectural_decisions
 
   - story: Методологии разработки
     steps:
       - intent: методологии_разработки
-      - action: action_methodologies
+      - action: utter_methodologies
 
   - story: Микросервисная архитектура
     steps:

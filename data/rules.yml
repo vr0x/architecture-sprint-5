@@ -23,27 +23,27 @@ rules:
   - rule: Выбор технологии
     steps:
       - intent: выбор_технологий
-      - action: action_tech_info
+      - action: utter_choose_tech_stack
 
   - rule: Микросервисная архитектура
     steps:
       - intent: микросервисы
-      - action: action_microservice_info
+      - action: utter_microservices
 
   - rule: Монолитная архитектура
     steps:
       - intent: монолит
-      - action: action_monolith_info
+      - action: utter_monolith
 
   - rule: Интеграция систем
     steps:
       - intent: интеграция_систем
-      - action: action_integration_info
+      - action: utter_integration
 
   - rule: Обеспечение безопасности
     steps:
       - intent: безопасность
-      - action: action_security_info
+      - action: utter_security
 
   - rule: Улучшение производительности
     steps:
@@ -53,27 +53,27 @@ rules:
   - rule: Масштабируемость системы
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - rule: Обеспечение отказоустойчивости
     steps:
       - intent: отказоустойчивость
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - rule: DevOps процессы
     steps:
       - intent: DevOps
-      - action: action_devops_info
+      - action: utter_devops
 
   - rule: Контейнеризация
     steps:
       - intent: контейнеризация
-      - action: action_containerization_info
+      - action: utter_containerization
 
   - rule: Выбор базы данных
     steps:
       - intent: выбор_базы_данных
-      - action: action_db_choice
+      - action: utter_database_choice
 
   - rule: Документация архитектуры
     steps:
@@ -103,34 +103,39 @@ rules:
   - rule: Безопасность микросервисов
     steps:
       - intent: безопасность_микросервисов
-      - action: action_security_info
+      - action: utter_security
 
   - rule: Масштабируемость микросервисов
     steps:
       - intent: масштабируемость
-      - action: action_scalability_info
+      - action: utter_scalability
 
   - rule: Отказоустойчивость микросервисов
     steps:
       - intent: отказоустойчивость_микросервисов
-      - action: action_resilience_info
+      - action: utter_fault_tolerance
 
   - rule: Архитектурные паттерны
     steps:
       - intent: архитектурные_паттерны
-      - action: action_architecture_patterns
+      - action: utter_architecture_patterns
 
   - rule: Архитектурные решения
     steps:
       - intent: архитектурные_решения
-      - action: action_architectural_decisions
+      - action: utter_architectural_decisions
 
   - rule: Методологии разработки
     steps:
       - intent: методологии_разработки
-      - action: action_methodologies
+      - action: utter_methodologies
 
   - rule: Микросервисная архитектура
     steps:
       - intent: микросервисная_архитектура
       - action: action_microservice_architecture
+
+  - rule: Облачные технологии
+    steps:
+      - intent: облачные_технологии
+      - action: action_cloud_technologies
