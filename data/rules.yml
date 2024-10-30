@@ -124,7 +124,7 @@ rules:
   - rule: Архитектурные решения
     steps:
       - intent: архитектурные_решения
-      - action: utter_architectural_decisions
+      - action: utter_describe_architecture
 
   - rule: Методологии разработки
     steps:

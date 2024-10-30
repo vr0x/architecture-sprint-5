@@ -115,7 +115,7 @@ stories:
   - story: Архитектурные решения
     steps:
       - intent: архитектурные_решения
-      - action: utter_architectural_decisions
+      - action: utter_describe_architecture
 
   - story: Методологии разработки
     steps:
