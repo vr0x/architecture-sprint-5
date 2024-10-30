@@ -99,5 +99,3 @@ responses:
 
   utter_project_info:
     - text: "Это чат бот написанный с использованием Rasa и React для общения об архитектуре"
-
-actions:
