@@ -1,11 +1,10 @@
 version: "3.1"
 rules:
   - rule: Приветствие
+    conversation_start: true
     steps:
       - intent: приветствие
       - action: utter_greet
-      - intent: запрос_помощи
-      - action: utter_help
 
   - rule: Прощание
     steps:
