@@ -4,6 +4,8 @@ rules:
     steps:
       - intent: приветствие
       - action: utter_greet
+      - intent: запрос_помощи
+      - action: utter_help
 
   - rule: Прощание
     steps:
