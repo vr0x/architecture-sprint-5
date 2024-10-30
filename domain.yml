@@ -102,3 +102,29 @@ responses:
 
   utter_service_network:
     - text: "Service Mesh — достаточно простой интеграционный паттерн для обеспечения механизмов сетевой упругости, повышения безопасности и обозреваемости приложений"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_help
+  - utter_describe_architecture
+  - utter_choose_tech_stack
+  - utter_microservices
+  - utter_monolith
+  - utter_integration
+  - utter_security
+  - utter_performance
+  - utter_scalability
+  - utter_fault_tolerance
+  - utter_devops
+  - utter_containerization
+  - utter_database_choice
+  - utter_methodologies
+  - utter_architecture_patterns
+  - utter_documentation
+  - utter_cloud_technologies
+  - utter_monitoring
+  - utter_orchestration
+  - utter_testing_info
+  - utter_project_info
+  - utter_service_network
