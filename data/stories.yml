@@ -10,7 +10,7 @@ stories:
   - story: Информация о проекте
     steps:
       - intent: описание_архитектуры
-      - action: action_project_info
+      - action: utter_project_info
 
   - story: Выбор технологии для проекта
     steps:
@@ -75,17 +75,17 @@ stories:
   - story: Мониторинг микросервисов
     steps:
       - intent: мониторинг_микросервисов
-      - action: action_monitoring_info
+      - action: utter_monitoring
 
   - story: Оркестрация микросервисов
     steps:
       - intent: оркестрация_микросервисов
-      - action: utter_help
+      - action: utter_orchestration
 
   - story: Тестирование микросервисов
     steps:
       - intent: тестирование_микросервисов
-      - action: action_testing_info
+      - action: utter_testing_info
 
   - story: Сервисная сеть
     steps:
@@ -125,7 +125,7 @@ stories:
   - story: Микросервисная архитектура
     steps:
       - intent: микросервисная_архитектура
-      - action: action_microservice_architecture
+      - action: utter_microservices
 
   - story: Облачные технологии
     steps:

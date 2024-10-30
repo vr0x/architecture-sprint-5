@@ -88,23 +88,16 @@ responses:
   utter_cloud_technologies:
     - text: "AWS, Azure и Google Cloud предлагают множество сервисов для разработки и развертывания приложений в облаке."
 
+  utter_monitoring:
+    - text: "Мониторинг микросервисов играет важную роль. Для мониторинга можно использовать инструменты OpenTelemetry"
+
+  utter_orchestration:
+    - text: "Для оркестрации микросервисов можно использовать Kubernetes или Docker Swarm"
+
+  utter_testing_info:
+    - text: "Для тестирования микросервисов могут использоваться инструменты: Selenium, Postman, JMeter"
+
+  utter_project_info:
+    - text: "Это чат бот написанный с использованием Rasa и React для общения об архитектуре"
+
 actions:
-  - action_suggest_tech_stack
-  - action_project_info
-  - action_tech_info
-  - action_microservice_info
-  - action_monolith_info
-  - action_integration_info
-  - action_security_info
-  - action_scalability_info
-  - action_resilience_info
-  - action_devops_info
-  - action_containerization_info
-  - action_db_choice
-  - action_monitoring_info
-  - action_testing_info
-  - action_architecture_patterns
-  - action_architectural_decisions
-  - action_methodologies
-  - action_microservice_architecture
-  - action_cloud_technologies
