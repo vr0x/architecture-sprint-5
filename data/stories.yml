@@ -40,7 +40,7 @@ stories:
   - story: Оптимизация производительности
     steps:
       - intent: производительность
-      - action: utter_help
+      - action: utter_performance
 
   - story: Масштабируемость системы
     steps:
@@ -70,7 +70,7 @@ stories:
   - story: Документация архитектуры
     steps:
       - intent: документация
-      - action: utter_help
+      - action: utter_documentation
 
   - story: Мониторинг микросервисов
     steps:
@@ -130,4 +130,4 @@ stories:
   - story: Облачные технологии
     steps:
       - intent: облачные_технологии
-      - action: action_cloud_technologies
+      - action: utter_cloud_technologies

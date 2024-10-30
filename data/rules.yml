@@ -48,7 +48,7 @@ rules:
   - rule: Улучшение производительности
     steps:
       - intent: производительность
-      - action: utter_help
+      - action: utter_performance
 
   - rule: Масштабируемость системы
     steps:
@@ -78,7 +78,7 @@ rules:
   - rule: Документация архитектуры
     steps:
       - intent: документация
-      - action: utter_help
+      - action: utter_documentation
 
   - rule: Мониторинг микросервисов
     steps:
@@ -138,4 +138,4 @@ rules:
   - rule: Облачные технологии
     steps:
       - intent: облачные_технологии
-      - action: action_cloud_technologies
+      - action: utter_cloud_technologies
