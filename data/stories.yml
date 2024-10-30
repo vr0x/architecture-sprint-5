@@ -90,7 +90,7 @@ stories:
   - story: Сервисная сеть
     steps:
       - intent: сервисная_сеть
-      - action: utter_help
+      - action: utter_service_network
 
   - story: Безопасность микросервисов
     steps:
