@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Привет
+      - Здравствуйте
+      - Добрый день
+
+  - intent: goodbye
+    examples: |
+      - До свидания
+      - Пока
+      - Увидимся
+
+  - intent: ask_architecture
+    examples: |
+      - Расскажите об архитектуре ПО
+      - Какие подходы существуют в архитектуре?
+      - Как выбрать архитектуру ПО?
+
+  - intent: affirm
+    examples: |
+      - Да
+      - Верно
+      - Именно
+
+  - intent: deny
+    examples: |
+      - Нет
+      - Не нужно
+      - Неверно
+
+  - intent: request_info
+    examples: |
+      - Расскажите больше об этом
+      - Можете уточнить?
+      - Какие есть детали?
+
+  - intent: ask_microservice_architecture
+    examples: |
+      - Что такое микросервисы?
+      - Что такое микросервисная архитектура?
