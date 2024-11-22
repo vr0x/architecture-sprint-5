@@ -1,9 +1,10 @@
 ai/models/*
 !ai/models/.gitkeep
-ai/.rasa/
 
-ai/__pycache__/
-ai/*.pyc
+.rasa/
+__pycache__/
+
+*.py[cod]
 
 # dependencies
 
