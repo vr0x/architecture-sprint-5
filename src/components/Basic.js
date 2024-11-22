@@ -38,19 +38,43 @@ function Basic() {
 
   // Функция для отправки сообщения на сервер Rasa и получения ответа
   const rasaAPI = async function handleClick(name, msg) {
-    await fetch("http://localhost:5005/webhooks/rest/webhook", {
-      method: "POST",
+    const response = await fetch("http://127.0.0.1:5005/webhooks/rest/webhook", {
+      method: "POST",      
       headers: {
-        Accept: "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json",
-        charset: "UTF-8",
+        "Accept-Charset": "UTF-8"
       },
-      credentials: "same-origin",
+      credentials: "same-origin",      
       body: JSON.stringify({ sender: name, message: msg }),
     })
-      .then((response) => response.json()) // Преобразуем ответ в JSON
-      .then((response) => {
-        if (response) {
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    const jsn = await response.json();
+    // console.log(jsn);
+    
+    const temp = jsn[0];
+    const recipient_id = temp["recipient_id"];
+    const recipient_msg = temp["text"];
+
+    // Создаем объект ответа бота
+    const response_temp = {
+      sender: "bot",
+      recipient_id: recipient_id,
+      msg: recipient_msg,
+    };
+    setbotTyping(false); // Останавливаем индикацию "бот печатает"
+    // Добавляем сообщение бота в историю чата
+    setChat((chat) => [...chat, response_temp]);
+
+    // console.log(resp);
+    /*
+    .then((response) => response.json()) // Преобразуем ответ в JSON
+      .then((response) => {        
+        if ( response && response.length > 0 ) {
+          console.log(response);
           // Получаем текстовое сообщение от бота
           const temp = response[0];
           const recipient_id = temp["recipient_id"];
@@ -68,9 +92,10 @@ function Basic() {
           setChat((chat) => [...chat, response_temp]);
         }
       });
+    */
   };
 
-  console.log(chat); // Для отладки, выводим текущее состояние чата в консоль
+  // console.log(chat); // Для отладки, выводим текущее состояние чата в консоль
 
   // Стили для карточки чата, заголовка, тела и нижней части
   const stylecard = {
