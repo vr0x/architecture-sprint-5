@@ -1,0 +1,55 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Привет
+      - Здравствуйте
+      - Добрый день
+
+  - intent: goodbye
+    examples: |
+      - До свидания
+      - Пока
+      - Увидимся
+
+  - intent: ask_architecture
+    examples: |
+      - Я хочу узнать об архитектуре
+      - Расскажите об архитектуре ПО
+
+  - intent: describe
+    examples: |
+      - Я хочу узнать больше
+      - Подробнее
+      - Что такое архитектура?
+
+  - intent: tech_stack
+    examples: |
+      - Я хочу узнать об использовании технологий
+    
+  - intent: monolith
+    examples: |
+      - Я хочу узнать о монолите
+      - Монолит
+
+  - intent: microservices
+    examples: |
+      - Я хочу узнать о микросервисах
+      - Микросервисы
+
+  - intent: security
+    examples: |
+      - Я хочу узнать о безопасности
+      - Безопасность
+ 
+  - intent: performance
+    examples: |
+      - Я хочу узнать о производительности
+      - Производительность
+
+  - intent: request_info
+    examples: |
+      - Я хочу узнать больше
+      - У меня есть вопрос
+

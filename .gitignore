@@ -1,5 +1,11 @@
 # dependencies
 
+.rasa
+
+__pycache__
+
+models
+
 /.pnp
 .pnp.js
 

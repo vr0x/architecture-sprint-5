@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+  - rule: Say hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Answer architecture questions
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+
+  - rule: Describe architecture
+    steps:
+      - intent: describe
+      - action: utter_describe
+
+  - rule: Describe tech stack
+    steps:
+      - intent: tech_stack
+      - action: utter_tech_stack
+
+  - rule: Describe monolith
+    steps:
+      - intent: monolith
+      - action: utter_monolith  
+  
+  - rule: Describe microservices
+    steps:
+      - intent: microservices
+      - action: utter_microservices
+
+  - rule: Describe security
+    steps:
+      - intent: security
+      - action: utter_security
+
+  - rule: Describe performance
+    steps:
+      - intent: performance
+      - action: utter_performance
+
+  - rule: Request additional information
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
