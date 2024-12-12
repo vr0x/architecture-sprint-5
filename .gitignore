@@ -335,3 +335,5 @@ rasa_env/
 models/
 actions/
 .rasa/
+rasa_env_clean/
+tests/
