@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: Say hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Answer architecture questions
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+
+  - rule: Request additional information
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
+
+  - rule: Request monolith info
+    steps:
+      - intent: request_monolith
+      - action: utter_monolith
+
+  - rule: Request micro info
+    steps:
+      - intent: request_micro
+      - action: utter_micro
+
+  - rule: Request cloud info
+    steps:
+      - intent: request_cloud
+      - action: utter_cloud
+
+  - rule: Request rest info
+    steps:
+      - intent: request_rest
+      - action: utter_rest

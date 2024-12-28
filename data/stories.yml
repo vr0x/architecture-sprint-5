@@ -1,0 +1,39 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask architecture
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask for more info
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
+
+  - story: ask about monolith
+    steps:
+      - intent: request_monolith
+      - action: utter_monolith
+
+  - story: ask about micro
+    steps:
+      - intent: request_micro
+      - action: utter_micro
+
+  - story: ask about cloud
+    steps:
+      - intent: request_cloud
+      - action: utter_cloud
+
+  - story: ask about rest
+    steps:
+      - intent: request_rest
+      - action: utter_rest

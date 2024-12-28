@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Привет
+      - Здравствуйте
+      - Добрый день
+  - intent: goodbye
+    examples: |
+      - До свидания
+      - Пока
+      - Увидимся
+  - intent: ask_architecture
+    examples: |
+      - Расскажите об архитектуре ПО
+      - Какие подходы существуют в архитектуре?
+      - Что такое микросервисная архитектура?
+      - Как выбрать архитектуру ПО?
+  - intent: affirm
+    examples: |
+      - Да
+      - Верно
+      - Именно
+  - intent: deny
+    examples: |
+      - Нет
+      - Не нужно
+      - Неверно
+  - intent: request_info
+    examples: |
+      - Расскажите больше об этом
+      - Можете уточнить?
+      - Какие есть детали?
+  - intent: request_monolith
+    examples: |
+      - Что такое монолитная архитектура?
+      - Расскажи о монолите
+      - Что такое монолит?
+  - intent: request_micro
+    examples: |
+      - Расскажи о микросервисах
+      - Что такое микросервисная архитектура?
+  - intent: request_cloud
+    examples: |
+      - Расскажи об облачной архитектуре
+      - Что такое облачная архитектура?
+  - intent: request_rest
+    examples: |
+      - Расскажи о REST
+      - Что такое REST?
+      - Зачем нужен rest?
