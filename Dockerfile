@@ -8,6 +8,7 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install npm -y
 
 WORKDIR /app
 COPY ./ /app
+
 RUN npm install
 RUN npm run build
 
