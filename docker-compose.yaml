@@ -2,6 +2,7 @@ services:
   ai-bot:
     build: .
     ports:
-      - "3000:3000"
+      - 3000:3000
+      - 5005:5005
     volumes: 
       - ./rasa:/app/rasa
