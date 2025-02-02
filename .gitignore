@@ -2,7 +2,7 @@
 
 /.pnp
 .pnp.js
-
+/rasa_env
 
 # production
 /build
