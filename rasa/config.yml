@@ -3,6 +3,8 @@ language: ru
 pipeline:
 - name: WhitespaceTokenizer
 - name: RegexFeaturizer
+  case_sensitive: False
+  use_word_boundaries: True
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: "char_wb"
@@ -13,11 +15,11 @@ pipeline:
   model_weights: "bert-base-cased"
   cache_dir: null
 - name: DIETClassifier
-  epochs: 1
+  epochs: 50
   transformer_size: 32
   number_of_transformer_layers: 1
   use_masked_language_model: false
-  batch_strategy: "balanced"
+  batch_strategy: "sequence"
   hidden_layers_sizes:
     text: [32]
 - name: EntitySynonymMapper
