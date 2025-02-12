@@ -1,0 +1,77 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask architecture
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+
+  - story: ask and goodbye
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask 2 and goodbye
+    steps:
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: hello and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: hello ask and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: hello ask arch and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask for more info
+    steps:
+      - intent: request_info
+      - action: utter_ask_more
+  
+  - story: hello and ask for more info
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_info
+      - action: utter_ask_more
+      - intent: request_info
+      - action: utter_ask_more
