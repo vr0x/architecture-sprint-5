@@ -7,7 +7,8 @@ pipeline:
 - name: CountVectorsFeaturizer             # Извлечение признаков по частоте слов
   analyzer: "char_wb"                      # Символьные N-граммы
   min_ngram: 1
-  max_ngram: 2                             # Уменьшены размеры N-грамм для ускорения
+  max_ngram: 10                             # Уменьшены размеры N-грамм для ускорения
+  epochs: 100  
 
 # Подключение предобученной модели трансформера (BERT)
 - name: "LanguageModelFeaturizer"
@@ -16,9 +17,9 @@ pipeline:
   cache_dir: null
 
 - name: DIETClassifier                      # Классификатор на базе DIET
-  epochs: 1                                 # Минимальное количество эпох обучения
+  epochs: 100                               # Минимальное количество эпох обучения
   transformer_size: 32                      # Минимальный размер слоя трансформера
-  number_of_transformer_layers: 1           # Один слой трансформера
+  number_of_transformer_layers: 3           # Один слой трансформера
   use_masked_language_model: false          # Отключено для ускорения
   batch_strategy: "balanced"
   hidden_layers_sizes:
@@ -26,14 +27,14 @@ pipeline:
 
 - name: EntitySynonymMapper                 # Маппер синонимов сущностей
 - name: ResponseSelector                    # Минимальный выбор ответа
-  epochs: 1                                 # Минимальное количество эпох обучения
+  epochs: 100                               # Минимальное количество эпох обучения
 
 policies:
 - name: MemoizationPolicy
-  max_history: 2                            # Минимальная история
+  max_history: 10                           # Минимальная история
 - name: RulePolicy
 - name: TEDPolicy
-  max_history: 2                            # Минимальное количество шагов в истории
-  epochs: 1                                 # Минимальное количество эпох обучения
+  max_history: 10                           # Минимальное количество шагов в истории
+  epochs: 100                               # Минимальное количество эпох обучения
   constrain_similarities: true
 assistant_id: 20250212-001735-little-berry
