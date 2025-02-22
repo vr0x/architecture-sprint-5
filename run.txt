@@ -1,0 +1,8 @@
+npm install
+npm run build
+npm run start
+
+rasa init
+rasa train
+rasa run --cors "*" --enable-api -vv --log-file logs.txt
+

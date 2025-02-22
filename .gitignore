@@ -3,6 +3,8 @@
 /.pnp
 .pnp.js
 
+/rasa_env
+.rasa
 
 # production
 /build
