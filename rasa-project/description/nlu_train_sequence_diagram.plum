@@ -1,0 +1,27 @@
+@startuml
+title Процесс обучения модели Rasa (nlu.yml)
+
+actor Пользователь
+participant "nlu.yml" as NLU
+participant "WhitespaceTokenizer" as Tokenizer
+participant "RegexFeaturizer" as Regex
+participant "LexicalSyntacticFeaturizer" as LexSyn
+participant "CountVectorsFeaturizer" as CountVec
+participant "LanguageModelFeaturizer" as BERT
+participant "DIETClassifier" as DIET
+participant "EntitySynonymMapper" as EntityMapper
+participant "ResponseSelector" as ResponseSel
+database "Обученная модель" as Model
+
+Пользователь -> NLU : Загружает данные (nlu.yml)
+NLU -> Tokenizer : Передает данные для токенизации
+Tokenizer -> Regex : Передает токенизированные данные
+Regex -> LexSyn : Передает данные с признаками Regex
+LexSyn -> CountVec : Передает данные с лексико-синтаксическими признаками
+CountVec -> BERT : Передает данные с признаками CountVectors
+BERT -> DIET : Передает данные с признаками BERT
+DIET -> EntityMapper : Передает данные для маппинга сущностей
+EntityMapper -> ResponseSel : Передает данные для выбора ответов
+ResponseSel -> Model : Сохраняет обученную модель
+
+@enduml
