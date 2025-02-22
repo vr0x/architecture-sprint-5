@@ -16,13 +16,13 @@ pipeline:
   cache_dir: null
 
 - name: DIETClassifier                      # Классификатор на базе DIET
-  epochs: 50                                # Минимальное количество эпох обучения
+  epochs: 80                                # Минимальное количество эпох обучения
   transformer_size: 256                     # Минимальный размер слоя трансформера
   number_of_transformer_layers: 4           # Один слой трансформера
   # use_masked_language_model: false        # Раскомментировать для ускорения
   batch_strategy: "balanced"
   hidden_layers_sizes:
-    text: [128, 64]                         # Минимальные скрытые слои
+    text: [256, 128]                        # Минимальные скрытые слои
   regularization_constant: 0.01
 
 - name: EntitySynonymMapper                 # Маппер синонимов сущностей
