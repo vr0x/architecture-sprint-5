@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+  - story: Пользователь спрашивает о какой-то технологии
+    steps:
+      - intent: ask_about_some_tech
+        entities:
+          - some_tech: Kafka
+      - action: action_provide_some_tech_info
+
+  - story: Пользователь спрашивает о проектировании ПО
+    steps:
+      - intent: ask_mcs_architecture
+      - action: utter_mcs_architecture
+
+  - story: Пользователь спрашивает о DDD
+    steps:
+      - intent: ask_about_ddd
+      - action: utter_about_ddd
+
+  - story: Пользователь спрашивает о взаимодействии микросервисов
+    steps:
+      - intent: ask_async_interaction_patterns
+      - action: utter_interaction_patterns
+
+  - story: Пользователь спрашивает о Docker
+    steps:
+      - intent: ask_docker
+      - action: utter_about_docker
+
+  - story: Пользователь спрашивает о типах архитектурных паттернов
+    steps:
+      - intent: ask_what_is_architecture_patterns
+      - action: utter_what_is_architecture_patterns
+
+  - story: Пользователь спрашивает о типах архитектурных паттернов
+    steps:
+      - intent: ask_architecture_patterns
+      - action: utter_about_architecture_patterns
+
+  - story: Пользователь спрашивает о типах паттернов для микросервисных архитектур
+    steps:
+      - intent: ask_patterns_are_used_when_designing_microservices
+      - action: utter_patterns_are_used_when_designing_microservices
+
+  - story: Пользователь спрашивает о паттернах уровня приложения
+    steps:
+      - intent: ask_application_level_patterns
+      - action: utter_application_level_patterns
+
+  - story: Пользователь спрашивает о паттернах уровня инфраструктуры приложения
+    steps:
+      - intent: ask_application_infrastructure_layer_patterns
+      - action: utter_application_infrastructure_layer_patterns
+
+  - story: Пользователь спрашивает о паттернах уровня инфраструктуры
+    steps:
+      - intent: ask_infrastructure_layer_patterns
+      - action: utter_infrastructure_layer_patterns

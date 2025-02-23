@@ -1,0 +1,92 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Привет
+      - Здравствуйте
+      - Добрый день
+      - Приветствую
+
+  - intent: goodbye
+    examples: |
+      - Пока
+      - До свидания
+      - Увидимся
+      - Всего хорошего
+      - До связи
+      - До завтра
+
+  - intent: ask_mcs_architecture
+    examples: |
+      - Что такое [SOLID](topic)
+      - Я хочу научиться [проектировать](topic) [микросервисные](topic) архитектуры
+      - Помоги мне разобраться с проектированием [микросервисов](topic)
+      - разбить [монолит](topic)
+
+  - intent: ask_what_is_architecture_patterns
+    examples: |
+      - что такое паттерны проектирования?
+      - расскажи мне про паттерны проектирования
+
+  - intent: ask_architecture_patterns
+    examples: |
+      - Какие паттерны проектирования существуют?
+      - Какие паттерны бывают?
+
+  - intent: ask_patterns_are_used_when_designing_microservices
+    examples: |
+      - Какие паттерны используются для проектирования микросервисов?
+      - Какие паттерны для проектирования микросервисов бывают?
+      - Какие паттерны используются при работе с микросервисами?
+
+  - intent: ask_about_ddd
+    examples: |
+      - что такое [ddd](topic)?
+      - какое отношение ddd имеет к микросервисам?
+
+  - intent: ask_async_interaction_patterns
+    examples: |
+      - как настроить [взаимодействие микросервисов](topic)?
+      - какие паттерны для построения взаимодействия существуют?
+
+  - intent: ask_application_level_patterns
+    examples: |
+      - что такое [паттерны уровня приложения](pattern_group)?
+      - расскажи о паттернах уровня приложения
+      - паттерны уровня приложения что это?
+
+  - intent: ask_application_infrastructure_layer_patterns
+    examples: |
+      - что такое [паттерны уровня инфраструктуры приложения](pattern_group)?
+      - расскажи о паттернах уровня инфраструктуры приложения
+      - паттерны уровня инфраструктуры приложения что это?
+
+  - intent: ask_infrastructure_layer_patterns
+    examples: |
+      - что такое [паттерны уровня инфраструктуры](pattern_group)?
+      - расскажи о паттернах уровня инфраструктуры
+      - паттерны уровня инфраструктуры что это?
+
+  - intent: ask_docker
+    examples: |
+      - Что такое [Docker](some_tech)?
+      - Зачем использовать Docker при создании микросервисной архитектуры?
+
+  - intent: ask_about_some_tech
+    examples: |
+      - Расскажи мне о [Kafka](some_tech)
+      - Как работает [Kubernetes](some_tech)?
+      - Расскажи мне про [Python](some_tech)
+      - Что делает [RabbitMQ](some_tech)?
+
+  - synonym: микросервис
+    examples: |
+      - мкс
+      - микро-сервис
+      - микросервис
+      - МКС
+
+  - regex: some_tech
+    examples: |
+      - \[A-Za-z]+

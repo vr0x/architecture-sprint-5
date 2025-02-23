@@ -6,6 +6,11 @@
 
 # production
 /build
+/rasa_env
+rasa_env/
+venv/
+.venv/
+env/
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,react,jetbrains+all,visualstudiocode,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,react,jetbrains+all,visualstudiocode,macos,windows
