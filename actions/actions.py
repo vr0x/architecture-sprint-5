@@ -8,7 +8,6 @@ class ActionProvideTechInfo(Action):
     def run(self, dispatcher, tracker, domain):
             tech = tracker.get_slot("some_tech")
 
-            # Словарь с сообщениями
             tech_info = {
                 "Kafka": "Kafka — Это инструмент для обеспечения взаимодействия между микросервисами. Посредник для передачи сообщений между микросервисами",
                 "Docker": "Docker — это платформа для контейнеризации приложений.",
@@ -33,7 +32,7 @@ class ActionProvideAsyncPatterns(Action):
         tech_patterns = {
             "Kafka": "В основе Kafka заложен паттерн асинхронного взаимодействия: Message Queueing этот паттерн представляет собой очередь событий. Из которой подписчики могут брать события в обработку",
         }
-        response = tech_patterns.get(pattern, f"Информации о паттерне для {pattern} нет")
+        response = tech_patterns.get(pattern)
         if response:
           dispatcher.utter_message(response)
         return []

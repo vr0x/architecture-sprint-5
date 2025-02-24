@@ -18,6 +18,50 @@ stories:
       - intent: ask_about_ddd
       - action: utter_about_ddd
 
+  - story: Пользователь спрашивает что такое микросервисы
+    steps:
+      - intent: ask_about_microservices
+      - action: utter_about_microservices
+      - intent: ask_about_benefits_of_microservices
+      - action: utter_profits_from_microservices
+
+  - story: Пользователь спрашивает как построить микросервисную архитектуру
+    steps:
+      - intent: ask_about_build_microservice_architecture
+      - action: utter_about_build_microservice_architecture
+      - action: utter_about_strangler_fig
+      - action: utter_about_steps_build_microservice_architecture
+
+  - story: Пользователь спрашивает про шаги по переходу к микросервисам
+    steps:
+      - intent: ask_14_factors_build_microservices
+      - action: utter_14_factors_build_microservices
+
+  - story: Пользователь спрашивает про паттерн strangler fig
+    steps:
+    - intent: ask_about_strangler_fig
+    - action: utter_about_strangler_fig
+
+  - story: Пользователь спрашивает про подход Большой взрыв
+    steps:
+      - intent: ask_about_big_bang
+      - action: utter_about_big_bang
+
+  - story: Пользователь спрашивает про виртуализацию
+    steps:
+      - intent: ask_about_virtualization
+      - action: utter_about_virtualization
+
+  - story: Пользователь спрашивает про контейнеризацию
+    steps:
+      - intent: ask_about_containerization
+      - action: utter_about_containerization
+
+  - story: Пользователь спрашивает что такое паттерн асинхронного взаимодействия
+    steps:
+      - intent: ask_what_is_async_interaction_patterns
+      - action: utter_what_is_async_interaction_patterns
+
   - story: Пользователь спрашивает о взаимодействии микросервисов
     steps:
       - intent: ask_async_interaction_patterns

@@ -34,22 +34,68 @@ nlu:
       - Какие паттерны проектирования существуют?
       - Какие паттерны бывают?
 
+  - intent: ask_about_microservices
+    examples: |
+      - Что такое микросервисная архитектура?
+      - Что такое микросервисы?
+
+  - intent: ask_about_benefits_of_microservices
+    examples: |
+      - Что даёт разбиение приложения на микросервисы?
+      - Зачем нужны микросервисы?
+      - В чем польза от микросервисов?
+      - Какие преимущества мы получим от микросервисной архитектуры?
+      - Какие преимущества мы получим от микросервисов?
+
+  - intent: ask_about_build_microservice_architecture
+    examples: |
+      - Как создать микросервисную архитектуру?
+      - Как перейти на микросервисы?
+      - Как разбить своё приложение на микросервисы?
+
   - intent: ask_patterns_are_used_when_designing_microservices
     examples: |
       - Какие паттерны используются для проектирования микросервисов?
       - Какие паттерны для проектирования микросервисов бывают?
       - Какие паттерны используются при работе с микросервисами?
 
+  - intent: ask_about_strangler_fig
+    examples: |
+      - Что такое [Strangler Fig](approach_system_refactoring)?
+      - Расскажи о [Strangler Fig](approach_system_refactoring)
+      - [Strangler Fig](approach_system_refactoring) это что?
+
+  - intent: ask_about_big_bang
+    examples: |
+      - Что такое [Большой взрыв](approach_system_refactoring)?
+      - Расскажи про [Большой взрыв](approach_system_refactoring)
+      - Объясни что такое [Большой взрыв](approach_system_refactoring)?
+
+  - intent: ask_14_factors_build_microservices
+    examples: |
+      - Что такое 14 факторов проектирования микросервисов?
+      - Какие конкретные шаги нужно проделать для построения микросервисной архитектуры?
+      - Расскажи про 14 факторов проектирования микросервисов
+      - Какие шаги для перехода к микросервисам?
+      - Дорожная карта перехода к микросервисам
+
   - intent: ask_about_ddd
     examples: |
       - что такое [ddd](topic)?
       - какое отношение ddd имеет к микросервисам?
+
+  - intent: ask_what_is_async_interaction_patterns
+    examples: |
+      - что такое [паттерн асинхронного взаимодействия](topic)?
+      - что собой представляют [паттерны асинхронного взаимодействия](topic)?
+      - что значит паттерн асинхронного взаимодействия?
 
   - intent: ask_async_interaction_patterns
     examples: |
       - как настроить [взаимодействие микросервисов](topic)?
       - какие паттерны для построения взаимодействия существуют?
 
+  - intent: ask_
   - intent: ask_application_level_patterns
     examples: |
       - что такое [паттерны уровня приложения](pattern_group)?
@@ -76,9 +122,20 @@ nlu:
   - intent: ask_about_some_tech
     examples: |
       - Расскажи мне о [Kafka](some_tech)
-      - Как работает [Kubernetes](some_tech)?
       - Расскажи мне про [Python](some_tech)
       - Что делает [RabbitMQ](some_tech)?
+
+  - intent: ask_about_containerization
+    examples: |
+      - Что такое [контейнеризация](approach)
+      - Расскажи о контейнеризации
+      - Как контейнеризация помогает при создании микросервисов?
+
+  - intent: ask_about_virtualization
+    examples: |
+      - Что такое [виртуализация](approach)
+      - Расскажи о виртуализации
+      - Как виртуализация помогает при создании микросервисов?
 
   - synonym: микросервис
     examples: |

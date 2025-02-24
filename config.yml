@@ -12,9 +12,6 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
   - name: RegexEntityExtractor
-    patterns:
-      - pattern: "Расскажи мне о ([A-Za-z]+)"
-      - pattern: "Расскажи мне про ([A-Za-z]+)"
 
   - name: LanguageModelFeaturizer
     model_name: "bert"

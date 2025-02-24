@@ -10,6 +10,7 @@
 rasa_env/
 venv/
 .venv/
+.rasa/
 env/
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,react,jetbrains+all,visualstudiocode,macos,windows
