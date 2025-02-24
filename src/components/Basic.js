@@ -54,13 +54,12 @@ function Basic() {
           // Получаем текстовое сообщение от бота
           const temp = response[0];
           const recipient_id = temp["recipient_id"];
-          const recipient_msg = temp["text"];
 
           // Создаем объект ответа бота
           const response_temp = {
             sender: "bot",
             recipient_id: recipient_id,
-            msg: recipient_msg,
+            msg: response.map(item => item.text),
           };
           setbotTyping(false); // Останавливаем индикацию "бот печатает"
 
@@ -119,7 +118,11 @@ function Basic() {
                     {user.sender === "bot" ? (
                       <div className="msgalignstart">
                         <BiBot className="botIcon" />
-                        <p className="botmsg" dangerouslySetInnerHTML={{ __html: user.msg }}></p>
+                        <div className="botmsg">
+                          {user.msg.map((message, msgKey) => (
+                            <p key={msgKey}  dangerouslySetInnerHTML={{ __html: message }}></p>
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       <div className="msgalignend">

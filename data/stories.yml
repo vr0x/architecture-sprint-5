@@ -48,9 +48,8 @@ stories:
     steps:
       - intent: ask_about_build_microservice_architecture
       - action: utter_about_build_microservice_architecture
-      - action: utter_about_strangler_fig
       - action: utter_about_steps_build_microservice_architecture
-      - action: utter_14_factors_build_microservices
+
   - story: Пользователь спрашивает про шаги по переходу к микросервисам
     steps:
       - intent: ask_14_factors_build_microservices
