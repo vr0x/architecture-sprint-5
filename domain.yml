@@ -7,7 +7,7 @@ intents:
   - ask_about_ddd
   - ask_what_is_async_interaction_patterns
   - ask_async_interaction_patterns
-  - ask_docker
+  - ask_about_docker
   - ask_architecture_patterns
   - ask_what_is_architecture_patterns
   - ask_patterns_are_used_when_designing_microservices
@@ -23,6 +23,12 @@ intents:
   - ask_about_virtualization
   - ask_about_big_bang
   - ask_14_factors_build_microservices
+  - ask_about_defined_interaction_pattern
+  - ask_about_service_boundaries
+  - ask_about_functional_decomposition
+  - ask_about_functional_single_responsibility
+  - ask_about_kubernetes
+  - ask_about_why_use_docker
 
 slots:
   some_tech:
@@ -35,6 +41,11 @@ slots:
     mappings:
       - type: from_entity
         entity: related_tech
+  interaction_pattern:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: interaction_pattern
 
 entities:
   - topic
@@ -43,10 +54,17 @@ entities:
   - related_tech
   - approach
   - approach_system_refactoring
+  - interaction_pattern
+  - decomposition_approach
+  - microservices_design_step
+  - containerization
 
 actions:
   - action_provide_some_tech_info
   - action_provide_async_patterns
+  - action_provide_brokers
+  - action_provide_service_boundaries
+  - action_provide_containerization
 
 responses:
   utter_about_big_bang:
@@ -120,8 +138,8 @@ responses:
 
   utter_14_factors_build_microservices:
     - text: "
-      <h3>Для создания микросервисной архитектуры вам понадобится выполнить 14 задач<h3>
-      <p>Реализация этих 14ти задач позволит вам создать эффективно работающую микросервисную архитектуру</p>
+      <h3>Для того чтобы построить у себя микросервисную архитектуру можно воспользоваться дорожной картой из 14ти шагов:</h3>
+      <p>Их выполнение позволит вам создать эффективно работающую систему:</p>
       <ul>
         <li>Определить границы сервисов</li>
         <li>Определиться с методами взаимодействия микросервисов между собой</li>
@@ -195,7 +213,12 @@ responses:
         <li>Сбор требований</li>
       </ul>
     "
-
+  utter_about_functional_decomposition:
+    - text: "
+      <p><strong>Функциональная декомпозиция</strong> - это подход к разбивке монолитного приложения на микросервисы</p>
+      <p>При его реализации команда, опираясь на показатели работы системы и узкие места расставляет приоритеты по извлечению функциональности из монолита</p>
+      <p>Самые проблемные участки системы или узкие места - извлекаются первыми. Затем менее проблемные и т.д...</p>
+    "
   utter_about_ddd:
     - text: "
     DDD - проектирование, ориентированное на домен.
@@ -205,6 +228,10 @@ responses:
         <li>Поддомен - Кусок функционала со своей предметной областью</li>
         <li>Контекст - это область, внутри которой определённые термины и правила имеют чёткое значение. В DDD контексты помогают избежать путаницы, определяя границы использования понятий.</li>
       </ul>
+    "
+  utter_about_single_responsibility:
+    - text: "
+      <p><strong>Принцип единой ответственности</strong> - это подход к разбивке монолитного приложения на микросервисы, в основе которого в микросервис попадает только та часть кода, которая реализует строго одну, конкретную функциональность или бизнес-задачу</p>
     "
 
   utter_what_is_async_interaction_patterns:
@@ -227,8 +254,35 @@ responses:
 
   utter_about_docker:
     - text: "
-    Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в средах с поддержкой контейнеризации, контейнеризатор приложений
-    [Подробнее о Docker и пользе его использования для микросервисов здесь](https://practicum.yandex.ru/blog/chto-takoe-docker)
+        Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в средах с поддержкой контейнеризации, контейнеризатор приложений
+        [Подробнее о Docker и пользе его использования для микросервисов здесь](https://practicum.yandex.ru/blog/chto-takoe-docker)
+    "
+
+  utter_about_why_use_docker:
+    - text: "
+        <p>Использование Docker при создании микросервисной архитектуры имеет множество преимуществ. Docker упрощает разработку, развёртывание и масштабирование микросервисов, делая процесс более эффективным и предсказуемым</p>
+        <p>Использование Docker при создании микросервисов помогает решить ряд задач:
+        <ul>
+          <li><strong>Изоляция микросервисов</strong> - Каждый микросервис работает в своём собственном контейнере, что обеспечивает изоляцию</li>
+          <li><strong>Портируемость</strong> - Docker-контейнеры могут быть легко перенесены между различными средами</li>
+          <li><strong>Масштабируемость</strong> - Docker упрощает масштабирование микросервисов</li>
+          <li><strong>Упрощение CI/CD</strong> - Docker интегрируется с системами непрерывной интеграции и доставки (CI/CD)</li>
+          <li><strong>Эффективное использование ресурсов</strong> - Контейнеры используют ресурсы более эффективно, чем виртуальные машины</li>
+          <li><strong> Упрощение управления зависимостями</strong> - Каждый микросервис может иметь свои собственные зависимости, упакованные в контейнер. Т.о. нет необходимости устанавливать все зависимости на одной машине, зависимости могут быть обновлены в одном контейнере без влияния на другие микросервисы.</li>
+        </ul>
+    "
+
+  utter_about_kubernetes:
+    - text: "
+        <p><strong>Kubernetes (часто сокращённо называют K8s)</strong> — это открытая платформа для автоматизации развёртывания, масштабирования и управления контейнеризированными приложениями. Он был разработан компанией Google и сейчас поддерживается Cloud Native Computing Foundation (CNCF)</p>
+        <p>Используется для построения больших микросервисных архитектур для управления жизненным циклом сервисов, быстрого масштабирования, при высоких нагрузках</p>
+        <p><strong>Преимущества Kubernetes:</strong></p>
+        <ul>
+          <li>Портативность: Приложения, развёрнутые в Kubernetes, могут работать на любом облаке или локальном кластере.</li>
+          <li>Масштабируемость: Легко масштабировать приложения в зависимости от нагрузки.</li>
+          <li>Автоматизация: Kubernetes автоматически управляет контейнерами, что снижает нагрузку на администраторов.</li>
+          <li>Экосистема: Большое количество инструментов и плагинов для интеграции с другими системами</li>
+        </ul>
     "
 
   utter_what_is_architecture_patterns:

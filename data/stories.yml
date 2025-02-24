@@ -1,6 +1,25 @@
 version: "3.1"
 
 stories:
+  - story: Пользователь спрашивает про определение границ микросервисов
+    steps:
+      - intent: ask_about_service_boundaries
+      - action: action_provide_service_boundaries
+      - action: utter_about_functional_decomposition
+      - action: utter_about_single_responsibility
+      - action: utter_about_ddd
+
+  - story: Пользователь спрашивает про единую ответственность
+    steps:
+      - intent: ask_about_functional_single_responsibility
+      - action: utter_about_single_responsibility
+
+  - story: Пользователь спрашивает про функуиональную декомпозицию
+    steps:
+      - intent: ask_about_functional_decomposition
+      - action: utter_about_functional_decomposition
+
+
   - story: Пользователь спрашивает о какой-то технологии
     steps:
       - intent: ask_about_some_tech
@@ -31,7 +50,7 @@ stories:
       - action: utter_about_build_microservice_architecture
       - action: utter_about_strangler_fig
       - action: utter_about_steps_build_microservice_architecture
-
+      - action: utter_14_factors_build_microservices
   - story: Пользователь спрашивает про шаги по переходу к микросервисам
     steps:
       - intent: ask_14_factors_build_microservices
@@ -62,6 +81,13 @@ stories:
       - intent: ask_what_is_async_interaction_patterns
       - action: utter_what_is_async_interaction_patterns
 
+  - story: Пользователь спрашивает о конкретном паттерне асинхронного взаимодействия
+    steps:
+      - intent: ask_about_defined_interaction_pattern
+        entities:
+          - interaction_pattern: Message Queueing
+      - action: action_provide_async_patterns
+
   - story: Пользователь спрашивает о взаимодействии микросервисов
     steps:
       - intent: ask_async_interaction_patterns
@@ -69,8 +95,18 @@ stories:
 
   - story: Пользователь спрашивает о Docker
     steps:
-      - intent: ask_docker
+      - intent: ask_about_docker
       - action: utter_about_docker
+
+  - story: Пользователь спрашивает зачем использовать Docker
+    steps:
+      - intent: ask_about_why_use_docker
+      - action: utter_about_why_use_docker
+
+  - story: Пользователь спрашивает о Kubernetes
+    steps:
+      - intent: ask_about_kubernetes
+      - action: utter_about_kubernetes
 
   - story: Пользователь спрашивает о типах архитектурных паттернов
     steps:

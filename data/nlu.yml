@@ -95,7 +95,6 @@ nlu:
       - как настроить [взаимодействие микросервисов](topic)?
       - какие паттерны для построения взаимодействия существуют?
 
-  - intent: ask_
   - intent: ask_application_level_patterns
     examples: |
       - что такое [паттерны уровня приложения](pattern_group)?
@@ -114,15 +113,33 @@ nlu:
       - расскажи о паттернах уровня инфраструктуры
       - паттерны уровня инфраструктуры что это?
 
-  - intent: ask_docker
+  - synonym: Docker
     examples: |
-      - Что такое [Docker](some_tech)?
-      - Зачем использовать Docker при создании микросервисной архитектуры?
+      - докер
+
+  - intent: ask_about_docker
+    examples: |
+      - Что такое [Docker](containerization)?
+      - Расскажи про [Docker](containerization)
+      - Какое отношение [Docker](containerization) имеет к микросервисам?
+      - Расскажи про [Докер](containerization)
+      - Что такое [Докер](containerization)?
+
+  - intent: ask_about_why_use_docker
+    examples: |
+      - зачем нужен [Docker](containerization)?
+      - Зачем использовать [Docker](containerization) при создании микросервисной архитектуры?
+
+  - intent: ask_about_kubernetes
+    examples: |
+      - Что такое [Kubernetes](containerization)?
+      - Расскажи про [Kubernetes](containerization)
+      - Зачем использовать [Kubernetes](containerization) при создании микросервисной архитектуры?
+      - Какое отношение [Kubernetes](containerization) имеет к микросервисам?
 
   - intent: ask_about_some_tech
     examples: |
       - Расскажи мне о [Kafka](some_tech)
-      - Расскажи мне про [Python](some_tech)
       - Что делает [RabbitMQ](some_tech)?
 
   - intent: ask_about_containerization
@@ -137,6 +154,52 @@ nlu:
       - Расскажи о виртуализации
       - Как виртуализация помогает при создании микросервисов?
 
+  - synonym: границы микросервисов
+    examples: |
+      - границ микросервисов
+      - микросервисные границы
+
+  - intent: ask_about_service_boundaries
+    examples: |
+      - Что представляет собой процесс определения [границ микросервисов](microservices_design_step)?
+      - Из каких шагов состоит процесс определения [границ микросервисов](microservices_design_step)?
+      - Как определить [границы микросервисов](microservices_design_step)?
+      - Как определить [микросервисные границы](microservices_design_step)?
+
+  - intent: ask_about_functional_decomposition
+    examples: |
+      - Что такое [функциональная декомпозиция](decomposition_approach)?
+      - Расскажи про [функциональную декомпозицию](decomposition_approach)
+
+  - intent: ask_about_functional_single_responsibility
+    examples: |
+      - Что такое [принцип единой ответственности](decomposition_approach)?
+      - Расскажи про [принцип единой ответственности](decomposition_approach)
+
+  - intent: ask_about_defined_interaction_pattern
+    examples: |
+      - Что такое [Message Queueing](interaction_pattern)?
+      - Расскажи о  [Message Queueing](interaction_pattern)?
+      - Расскажи про паттерн [Очередь сообщений](interaction_pattern)
+      - Что такое [Messages Queueing](interaction_pattern)?
+      - Что такое [Publish/Subscribe](interaction_pattern)?
+      - Расскажи о [Publish/Subscribe](interaction_pattern)?
+      - Расскажи про паттерн [Публикация/Подписка](interaction_pattern)
+      - Что означает [Pub/Sub](interaction_pattern)?
+      - Что такое [Pub/Sub](interaction_pattern)?
+      - Что такое [Event Sourcing](interaction_pattern)?
+      - Расскажи о [Event Sourcing](interaction_pattern)?
+      - Расскажи про паттерн [Хранение событий](interaction_pattern)?
+      - Что такое паттерн [Хранение событий](interaction_pattern)?
+      - Что такое [Choreography](interaction_pattern)?
+      - Расскажи о [Choreography](interaction_pattern)?
+      - Что такое [Хореография](interaction_pattern)?
+      - Расскажи про паттерн [Хореография](interaction_pattern)
+      - Что такое [Orchestration](interaction_pattern)?
+      - Расскажи о [Orchestration](interaction_pattern)?
+      - Что такое [Оркестрация](interaction_pattern)?
+      - Расскажи про паттерн [Оркестрация](interaction_pattern)
+
   - synonym: микросервис
     examples: |
       - мкс
@@ -144,6 +207,25 @@ nlu:
       - микросервис
       - МКС
 
-  - regex: some_tech
+  - synonym: Publish/Subscribe
     examples: |
-      - \[A-Za-z]+
+      - Pub/Sub
+      - Публикация/Подписка
+
+  - synonym: Event Sourcing
+    examples: |
+      - Хранение событий
+
+  - synonym: Message Queueing
+    examples: |
+      - Очередь сообщений
+      - Queueing Message
+      - Messages Queueing
+
+  - synonym: Choreography
+    examples: |
+      - Хореография
+
+  - synonym: Orchestration
+    examples: |
+      - Оркестрация

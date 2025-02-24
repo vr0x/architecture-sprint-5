@@ -8,6 +8,7 @@
 /build
 /rasa_env
 rasa_env/
+models/
 venv/
 .venv/
 .rasa/
@@ -336,3 +337,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react,jetbrains+all,visualstudiocode,macos,windows
+/models/

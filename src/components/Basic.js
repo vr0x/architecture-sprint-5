@@ -119,11 +119,11 @@ function Basic() {
                     {user.sender === "bot" ? (
                       <div className="msgalignstart">
                         <BiBot className="botIcon" />
-                        <h5 className="botmsg">{user.msg}</h5>
+                        <p className="botmsg" dangerouslySetInnerHTML={{ __html: user.msg }}></p>
                       </div>
                     ) : (
                       <div className="msgalignend">
-                        <h5 className="usermsg">{user.msg}</h5>
+                        <p className="usermsg">{user.msg}</p>
                         <BiUser className="userIcon" />
                       </div>
                     )}
