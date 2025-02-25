@@ -119,6 +119,7 @@ nlu:
   - synonym: Docker
     examples: |
       - докер
+      - Докер
 
   - intent: ask_about_docker
     examples: |
@@ -126,12 +127,7 @@ nlu:
       - Расскажи про [Docker](containerization)
       - Какое отношение [Docker](containerization) имеет к микросервисам?
       - Расскажи про [Докер](containerization)
-      - Что такое [Докер](containerization)?
-
-  - intent: ask_about_why_use_docker
-    examples: |
-      - зачем нужен [Docker](containerization)?
-      - Зачем использовать [Docker](containerization) при создании микросервисной архитектуры?
+      - [Докер](containerization) что это?
 
   - intent: ask_about_kubernetes
     examples: |

@@ -96,10 +96,6 @@ stories:
     steps:
       - intent: ask_about_docker
       - action: utter_about_docker
-
-  - story: Пользователь спрашивает зачем использовать Docker
-    steps:
-      - intent: ask_about_why_use_docker
       - action: utter_about_why_use_docker
 
   - story: Пользователь спрашивает о Kubernetes

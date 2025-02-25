@@ -28,7 +28,6 @@ intents:
   - ask_about_functional_decomposition
   - ask_about_functional_single_responsibility
   - ask_about_kubernetes
-  - ask_about_why_use_docker
 
 slots:
   some_tech:
