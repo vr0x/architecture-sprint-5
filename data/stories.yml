@@ -1,0 +1,134 @@
+version: "3.1"
+
+stories:
+  - story: Пользователь спрашивает про определение границ микросервисов
+    steps:
+      - intent: ask_about_service_boundaries
+      - action: action_provide_service_boundaries
+      - action: utter_about_functional_decomposition
+      - action: utter_about_single_responsibility
+      - action: utter_about_ddd
+
+  - story: Пользователь спрашивает про единую ответственность
+    steps:
+      - intent: ask_about_functional_single_responsibility
+      - action: utter_about_single_responsibility
+
+  - story: Пользователь спрашивает про функуиональную декомпозицию
+    steps:
+      - intent: ask_about_functional_decomposition
+      - action: utter_about_functional_decomposition
+
+
+  - story: Пользователь спрашивает о какой-то технологии
+    steps:
+      - intent: ask_about_some_tech
+        entities:
+          - some_tech: Kafka
+      - action: action_provide_some_tech_info
+
+  - story: Пользователь спрашивает о проектировании ПО
+    steps:
+      - intent: ask_mcs_architecture
+      - action: utter_mcs_architecture
+
+  - story: Пользователь спрашивает о DDD
+    steps:
+      - intent: ask_about_ddd
+      - action: utter_about_ddd
+
+  - story: Пользователь спрашивает что такое микросервисы
+    steps:
+      - intent: ask_about_microservices
+      - action: utter_about_microservices
+      - intent: ask_about_benefits_of_microservices
+      - action: utter_profits_from_microservices
+
+  - story: Пользователь спрашивает как построить микросервисную архитектуру
+    steps:
+      - intent: ask_about_build_microservice_architecture
+      - action: utter_about_build_microservice_architecture
+      - action: utter_about_steps_build_microservice_architecture
+
+  - story: Пользователь спрашивает про шаги по переходу к микросервисам
+    steps:
+      - intent: ask_14_factors_build_microservices
+      - action: utter_14_factors_build_microservices
+
+  - story: Пользователь спрашивает про паттерн strangler fig
+    steps:
+    - intent: ask_about_strangler_fig
+    - action: utter_about_strangler_fig
+
+  - story: Пользователь спрашивает про подход Большой взрыв
+    steps:
+      - intent: ask_about_big_bang
+      - action: utter_about_big_bang
+
+  - story: Пользователь спрашивает про виртуализацию
+    steps:
+      - intent: ask_about_virtualization
+      - action: utter_about_virtualization
+
+  - story: Пользователь спрашивает про контейнеризацию
+    steps:
+      - intent: ask_about_containerization
+      - action: utter_about_containerization
+
+  - story: Пользователь спрашивает что такое паттерн асинхронного взаимодействия
+    steps:
+      - intent: ask_what_is_async_interaction_patterns
+      - action: utter_what_is_async_interaction_patterns
+
+  - story: Пользователь спрашивает о конкретном паттерне асинхронного взаимодействия
+    steps:
+      - intent: ask_about_defined_interaction_pattern
+        entities:
+          - interaction_pattern: Message Queueing
+      - action: action_provide_async_patterns
+
+  - story: Пользователь спрашивает о взаимодействии микросервисов
+    steps:
+      - intent: ask_async_interaction_patterns
+      - action: utter_interaction_patterns
+
+  - story: Пользователь спрашивает о Docker
+    steps:
+      - intent: ask_about_docker
+      - action: utter_about_docker
+      - action: utter_about_why_use_docker
+
+  - story: Пользователь спрашивает о Kubernetes
+    steps:
+      - intent: ask_about_kubernetes
+      - action: utter_about_kubernetes
+
+  - story: Пользователь спрашивает о типах архитектурных паттернов
+    steps:
+      - intent: ask_what_is_architecture_patterns
+      - action: utter_what_is_architecture_patterns
+
+  - story: Пользователь спрашивает о типах архитектурных паттернов
+    steps:
+      - intent: ask_architecture_patterns
+      - action: utter_about_architecture_patterns
+
+  - story: Пользователь спрашивает о типах паттернов для микросервисных архитектур
+    steps:
+      - intent: ask_patterns_are_used_when_designing_microservices
+      - action: utter_patterns_are_used_when_designing_microservices
+
+  - story: Пользователь спрашивает о паттернах уровня приложения
+    steps:
+      - intent: ask_application_level_patterns
+      - action: utter_application_level_patterns
+
+  - story: Пользователь спрашивает о паттернах уровня инфраструктуры приложения
+    steps:
+      - intent: ask_application_infrastructure_layer_patterns
+      - action: utter_application_infrastructure_layer_patterns
+
+  - story: Пользователь спрашивает о паттернах уровня инфраструктуры
+    steps:
+      - intent: ask_infrastructure_layer_patterns
+      - action: utter_infrastructure_layer_patterns
