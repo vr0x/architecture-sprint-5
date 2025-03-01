@@ -3,6 +3,12 @@
 /.pnp
 .pnp.js
 
+/rasa_env
+/node_modules
+/rasa_app/.rasa/cache
+/rasa_app/models
+/rasa_app/**/__pycache__
+/rasa_app/actions
 
 # production
 /build
@@ -134,7 +140,7 @@ Temporary Items
 ### Node ###
 # Logs
 logs
-*.log
+#*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
