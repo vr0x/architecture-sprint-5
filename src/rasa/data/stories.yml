@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+  - story: Приветствие и вопросы по микросервисной архитектуре
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_microservices_related_questions
+      - action: utter_microservices_common_questions_response
+      - intent: ask_microservices_implementation_related_questions
+      - action: utter_microservices_implementation_questions_response
+
+  - story: Прощание
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Запрос дополнительной информации
+    steps:
+      - intent: request_info
+      - action: utter_additional_info

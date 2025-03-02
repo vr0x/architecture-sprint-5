@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+  - rule: Приветствие
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Прощание
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Общие вопросы по микроервисам
+    steps:
+      - intent: ask_microservices_related_questions
+      - action: utter_microservices_common_questions_response
+
+  - rule: Вопросы по реализации микроcервисной архитектуры
+    steps:
+      - intent: ask_microservices_implementation_related_questions
+      - action: utter_microservices_implementation_questions_response
+
+  - rule: Запрос дополнительной информации
+    steps:
+      - intent: request_info
+      - action: utter_additional_info

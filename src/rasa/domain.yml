@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - request_info
+  - ask_microservices_related_questions
+  - ask_microservices_implementation_related_questions
+  - confirmation
+  - deny
+  - goodbye
+
+responses:
+  utter_greet:
+    - text: "Здравствуйте! Готов помочь по вопросам Архитектуры ПО."
+
+  utter_goodbye:
+    - text: "До свидания! Если будут вопросы, обращайтесь."
+
+  utter_additional_info:
+    - text: "Не могли бы вы конкретизировать вопрос?"
+
+  utter_acknowledge:
+    - text: "Вопрос ясен. Спасибо."
+
+  utter_microservices_common_questions_response:
+    - text: "Микросервисная архитектура — это подход к построению приложений, при котором программа делится на небольшие независимые компоненты (микросервисы), каждый из которых выполняет свою конкретную бизнес-задачу и может работать отдельно от других."
+
+  utter_microservices_implementation_questions_response:
+    - text: "Микросервисная архитектура реализуется путём разделения приложения на независимые модули, каждый из которых разрабатывается, развёртывается и масштабируется отдельно, при этом все сервисы взаимодействуют через API и обычно управляются с помощью контейнеров и систем оркестрации. Для успешной реализации необходимо обеспечить автономность каждого сервиса, настроить их взаимодействие, организовать мониторинг и управление через DevOps-инструменты, а также предусмотреть независимое обновление и масштабирование каждого компонента системы."
+
+entities:
+  - topic
+
+slots:
+  topic:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
