@@ -1,3 +1,9 @@
+# rasa
+rasa_env
+__pycache__
+.rasa
+models
+
 # dependencies
 
 /.pnp
